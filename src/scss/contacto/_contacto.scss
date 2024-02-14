@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto {
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__dos{
+            @include m.grid (2, v.$separacion);
+        }
+    }
+
+    background-color: v.$grisClaro;
+    margin: 0 auto;
+    height: 80vh;
+
+    
+
+    &__buscar {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    &__label{
+        display: block;
+        text-transform: uppercase;
+        color: v.$final;
+        margin: 1rem 0;
+    }
+
+    &__input{
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+    }
+
+    &__campo{
+        margin-bottom: 1rem;
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 6rem;
+        color: v.$primario;
+    }
+
+    &__descripcion {
+        text-align: center;
+        color: v.$final;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    &__submit{
+        @include m.boton(v.$final, v.$primario);
+        margin: v.$separacion auto;
+        padding: 1.5rem 15rem;
+
+    }
+
+}

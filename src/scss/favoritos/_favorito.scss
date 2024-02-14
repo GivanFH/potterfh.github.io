@@ -1,0 +1,43 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+.favorito{
+    background-color: v.$blanco;
+    padding: 20rem;
+    margin-bottom: 2rem;
+    box-shadow: (0px 0px 2.6rem -.8rem darken(v.$grisClaro, 15%));
+    border-radius: .5rem;
+
+    &__contenido{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include m.tablet {
+            align-items: flex-start;
+        }
+    }
+
+    &__nombre{
+        margin: 1rem 0;
+        color: v.$primario;
+        font-size: 5rem;
+    }
+
+    &__descripcion{
+        margin: 2rem .5rem;
+        text-align: center;
+        font-size: 2rem;
+        color: v.$final;
+        line-height: 1.5;
+
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+
+    &__boton{
+        @include m.boton(v.$final, v.$primario)
+    }
+}

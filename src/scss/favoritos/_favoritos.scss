@@ -1,0 +1,22 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.favoritos {
+
+    height: 110vh;
+    display: block;
+    
+    @include m.tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    background-color: v.$grisClaro;
+    padding: v.$separacion 0;
+
+    &__heading {
+        text-align: center;
+        color: v.$secundario;
+    }
+}
