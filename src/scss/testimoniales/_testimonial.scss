@@ -2,54 +2,31 @@
 @use 'base/mixins' as m;
 
 
-.testimonial {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
+.testimonial{
     color: v.$blanco;
 
-    @include m.tablet {
-        &:last-of-type {
-            margin-top: 18rem;
-        }
-    }
-
-    &__header {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
-
-    &__imagen {
-        flex-basis: 10rem;
-        border-radius: 50%;
-        // Oculta lo que tiene el div, por lo que si redondea la imagen
-        overflow: hidden;
-    }
-
     &__autor {
+        text-align: center;
         color: v.$primario;
         font-weight: 700;
         font-size: 6rem;
-        margin: v.$separacion;
+
+        @include m.desktop{
+            text-align: left;
+        }
     }
 
     &__texto {
+        text-align: center;
         color: v.$primario;
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 1.5;
-        margin: 2rem 0;
-        padding-left: 4rem;
+        margin: 0;
 
-        // &::before {
-        //     content: ' " ';
-        //     font-size: 10rem;
-        //     position: absolute;
-        //     left: 0;
-        //     top: -4rem;
-        //     opacity: .2;
-        //     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        // }
+        @include m.desktop {
+            text-align: left;
+        }
     }
+
 }

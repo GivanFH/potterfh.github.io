@@ -9,8 +9,12 @@
     }
 
     &__grid{
-        @include m.tablet {
+        @include m.desktop {
             @include m.grid(2, v.$separacion);
         }
+    }
+
+    #comodin{
+        margin-bottom: 10rem;
     }
 }
