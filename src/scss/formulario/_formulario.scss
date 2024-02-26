@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .formulario {
-    
+
     &__grid {
         @include m.tablet {
             display: grid;
@@ -12,21 +12,24 @@
 
     &__contenido {
         background-color: v.$primario;
-        padding: v.$separacion;
+        padding: 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        list-style: none;
 
         &--li {
-
-            display: block;
             color: v.$secundario;
             font-weight: 300;
             font-size: 2rem;
-            list-style: none;
-            @include m.grid(2, v.$separacion);
 
-           
+            @include m.desktop {
+                @include m.grid(2, v.$separacion);
+            }
+        }
+
+        #li-first{
+            margin-bottom: 5rem;
         }
     }
 
@@ -34,7 +37,11 @@
         color: v.$secundario;
         text-align: left;
         font-weight: 700;
-        font-size: 8rem;
+        font-size: 7rem;
+
+        @include m.tablet {
+            font-size: 8rem;
+        }
     }
 
     &__parrafo {
@@ -84,3 +91,4 @@
         }
     }
 }
+
