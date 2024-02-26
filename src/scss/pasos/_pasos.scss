@@ -6,11 +6,14 @@
     background-color: v.$primario;
 
     &__contenido {
-        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include m.desktop {
+            height: 110vh;
+        }
     }
 
     &__paso {
@@ -21,33 +24,46 @@
     }
 
     &__heading {
-
-        @include m.tablet {
-            margin-left: 10rem;
-        }
-
         color: v.$secundario;
-        font-size: 9rem;
+        font-size: 5rem;
+        text-align: center;
+        margin-top: v.$separacion;
 
         &--descripcion {
 
-            @include m.tablet {
+            @include m.desktop {
                 margin-left: 10rem;
+                text-align: left;
+                padding-top: 0;
+            }
 
+            @include m.tablet {
+                text-align: left;
+                margin-left: 5rem;
             }
 
             line-height: 1.5;
             font-size: 1.8rem;
             font-weight: 300;
             color: v.$blanco;
-            display: block
+            display: block;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        @include m.desktop {
+            font-size: 9rem;
+            text-align: left;
+            margin-left: 10rem;
         }
     }
 
     &__grid {
-
-
         @include m.tablet {
+            @include m.grid(2, v.$separacion);
+        }
+
+        @include m.desktop {
             display: grid;
             grid-template-columns: 2fr 3fr;
             gap: v.$separacion;
@@ -56,6 +72,6 @@
 
     &__imagen {
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
     }
 }

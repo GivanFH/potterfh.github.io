@@ -3,10 +3,10 @@
 
 .favoritos {
 
-    height: 110vh;
     display: block;
     
     @include m.tablet {
+        height: 110vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
